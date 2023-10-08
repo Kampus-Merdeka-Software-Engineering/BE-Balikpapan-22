@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// MODEL SHIPMENT
+model Shipment {
+  id        Int    @id @default(autoincrement())
+  status    String
+}
+
+// MODEL PRICING
+model Pricing {
+  id            Int     @id @default(autoincrement())
+  origin        String
+  destination   String
+  price         Int
+}
+
