@@ -3,7 +3,7 @@ const { prisma } = require('../config/prisma');
 
 async function getPrice(asal, tujuan) {
   try {
-    const price = await prisma.price.findUnique({
+    const price = await prisma.pricing.findFirst({
       where: {
         origin: asal,
         destination: tujuan

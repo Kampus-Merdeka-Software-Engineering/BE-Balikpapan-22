@@ -23,7 +23,7 @@ app.use('/api', apiRouter);
 // /api/users
 apiRouter.use('/shipment', shipmentRoutes);
 apiRouter.use('/price', pricingRoutes);
-apiRouter.use('/review', reviewRoutes)
+apiRouter.use('/review', reviewRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
