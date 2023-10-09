@@ -10,7 +10,7 @@ async function  getShipmentById(req, res) {
     }
     res.status(200).json({
       message: "Successfully fetched user",
-      data: shipment
+      data: shipment,
     });
   } catch (error) {
     console.error(error);

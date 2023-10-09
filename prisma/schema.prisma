@@ -24,3 +24,8 @@ model Pricing {
   price         Int
 }
 
+// MODEL REVIEW
+model Review {
+  id            Int     @id @default(autoincrement())
+  review        String
+}

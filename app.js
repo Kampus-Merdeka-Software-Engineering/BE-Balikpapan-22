@@ -5,6 +5,7 @@ const app = express();
 const { shipmentRoutes } = require('./routes/shipmentRoutes');
 const { pricingRoutes } = require('./routes/pricingRoutes')
 const { logger } = require('./middleware/logger');
+const { reviewRoutes } = require('./routes/reviewRoutes');
 const PORT = 3000 || process.env.PORT;
 
 // Middleware
@@ -22,6 +23,7 @@ app.use('/api', apiRouter);
 // /api/users
 apiRouter.use('/shipment', shipmentRoutes);
 apiRouter.use('/price', pricingRoutes);
+apiRouter.use('/review', reviewRoutes)
 
 // Error handling middleware
 app.use((err, req, res, next) => {
