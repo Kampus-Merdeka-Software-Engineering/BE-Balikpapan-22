@@ -1,6 +1,5 @@
 const shipmentService = require('../services/shipmentService');
 
-
 // Get a shipment by ID
 async function  getShipmentById(req, res) {
   const { shipmentId } = req.params;
